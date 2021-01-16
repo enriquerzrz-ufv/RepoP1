@@ -14,15 +14,6 @@ public class golfPlayer {
     @CsvBindByName
     private   String edad;
 
-
-    public golfPlayer(int posicion, String nombre, String apellido, String pais, String edad) {
-        this.posicion = posicion;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.pais = pais;
-        this.edad = edad;
-    }
-
     public int getPosicion() {
         return posicion;
     }

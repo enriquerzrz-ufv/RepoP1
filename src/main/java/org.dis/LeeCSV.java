@@ -17,8 +17,7 @@ public class LeeCSV {
             BufferedReader lectorFichero = new BufferedReader(new FileReader(path));
             CsvToBean csvToBean = new CsvToBeanBuilder(lectorFichero).withType(golfPlayer.class).withIgnoreLeadingWhiteSpace(true).build();
 
-            List<golfPlayer> players = csvToBean.parse();
-            return players;
+            return (List<golfPlayer>) csvToBean.parse();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
             return null;

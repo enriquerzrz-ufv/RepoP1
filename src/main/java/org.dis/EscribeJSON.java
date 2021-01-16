@@ -2,10 +2,15 @@
 package org.dis;
 
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 public class EscribeJSON {
 
     public static void main(String[] args) {
-        LeeCSV.parseaCSV("best-golf-players.csv");
+        String json = new Gson().toJson(LeeCSV.parseaCSV("best-golf-players.csv"));
+        System.out.println(json);
+
         
     }
     
